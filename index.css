@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+body {
+  height: 100vh;
+  width: 97vw;
+  /* overflow: hidden; */
+  background-image: url("https://wallpapercave.com/wp/wp2802533.png");
+  background-size: contain;
+}
+
+#allNotes {
+  margin: 10px;
+  padding: 5px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-left: 30px;
+}
+
+#starNotes {
+  margin: 10px;
+  padding: 5px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-left: 30px;
+}
+
+.note {
+  width: 220px;
+  position: relative;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px 20px;
+  height: 250px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.transit {
+  transition: width, color;
+  transition: 500ms;
+}
+
+.note form {
+  display: flex;
+  flex-direction: column;
+}
+
+form textarea {
+  border: hidden;
+  background-color: transparent;
+}
+
+textarea:focus {
+  border: none !important;
+  outline: none;
+}
+
+form input {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  bottom: 57px;
+  right: 15px;
+}
+
+.note svg {
+  stroke: rgb(114, 114, 114);
+  z-index: 1;
+  position: absolute;
+  right: -4%;
+  top: -3%;
+  transform: scale(1.4);
+}
+
+.singleNote {
+  border: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.singleNote:hover {
+  cursor: default;
+}
+textarea:hover {
+  cursor: default;
+}
+.singleNote:focus {
+  cursor: text;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 500;
+  overflow-y: hidden;
+}
+
+.singleNote {
+  font-size: 16px;
+  margin-top: 5px;
+  color: #575757;
+  height: 180px;
+}
+
+.date {
+  padding-top: 16px;
+  border-top: 1px solid #ccc;
+  font-size: 14px;
+  color: #6d6d6d;
+}
+
+.deleteBtn {
+  font-size: 25px;
+  font-weight: 100;
+  position: absolute;
+  bottom: 8px;
+  right: 18px;
+  z-index: 1;
+}
+
+.deleteBtn:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+.star {
+  stroke: #272727c1;
+  fill: #a2a2a2e7;
+}
+
+.marked-yellow {
+    stroke: rgb(0, 0, 0);
+    fill: yellow;
+  }
+
+.delAni {
+  width: 0px;
+}
